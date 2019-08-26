@@ -4,6 +4,7 @@
 /* font-family: 'Open Sans', sans-serif; */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
 
+/* Estilização dos elementos com Flexbox */
 
 body, html {
     margin: 0;
@@ -97,6 +98,7 @@ textarea {
     cursor: pointer;
 }
 
+/* Ultilizando Media query para ajustes na responsividade */
 
 @media screen and (max-width: 480px) {
     .container {
