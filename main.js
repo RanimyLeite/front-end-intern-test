@@ -20,12 +20,28 @@
     // uma string. Toda string contém essa propriedade.
     const nameLength = nameValue.length;
 
-    // "window" é um objeto global que representa a janela (ou aba) do
-    // navegador que está executando o código do seu site. O método
-    // "alert" simplesmente mostra um aviso para o usuário contendo a
-    // mensagem provida.
-    window.alert(`Botão enviar clicado! Conteúdo do campo nome: ${nameValue} (${nameLength} caracteres)`);
 
+    if(nameValue == "" || nameLength < 4 ||  nameLength > 30) {
+        window.alert("Por favor preencha o campo Nome!")
+          contactForm.nameInput.focus();
+          return false;
+    } else if( emailInput.value == "" || emailInput.value.indexOf('@' && '.com') == -1){
+        window.alert("Por favor preencha o campo Email com um email válido!")
+          emailInput.focus();
+          return false;
+    }else if (messageInput.value == "" ){
+      window.alert("Por favor preencha o campo Menssagem!")
+        messageInput.focus();
+        return false;
+    } else {
+
+      // "window" é um objeto global que representa a janela (ou aba) do
+      // navegador que está executando o código do seu site. O método
+      // "alert" simplesmente mostra um aviso para o usuário contendo a
+      // mensagem provida.
+      window.alert(`Obrigado ${nameValue} por preencher nosso formulário!`);
+
+    }
     // Altere e complete essa função para validar os campos do formulário
     // de acordo com as especificações do teste. Boa sorte!
   });
