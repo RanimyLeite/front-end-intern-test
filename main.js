@@ -20,15 +20,19 @@
     // uma string. Toda string contém essa propriedade.
     const nameLength = nameValue.length;
 
+    //Documentação da validação
 
+    // Testando se o campo está nulo ou tem um nome menor que 4 ou maior que 30;
     if(nameValue == "" || nameLength < 4 ||  nameLength > 30) {
         window.alert("Por favor preencha o campo Nome!")
           contactForm.nameInput.focus();
           return false;
+      // Testa se o campo é nulo e se existe '@' e '.com' já que o html não faz pois está como type text;
     } else if( emailInput.value == "" || emailInput.value.indexOf('@' && '.com') == -1){
         window.alert("Por favor preencha o campo Email com um email válido!")
           emailInput.focus();
           return false;
+      // Testa se o campo é nulo;
     }else if (messageInput.value == "" ){
       window.alert("Por favor preencha o campo Menssagem!")
         messageInput.focus();
