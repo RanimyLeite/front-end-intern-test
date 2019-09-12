@@ -22,21 +22,43 @@
 
     //Documentação da validação
 
-    // Testando se o campo está nulo ou tem um nome menor que 4 ou maior que 30;
-    if(nameValue == "" || nameLength < 4 ||  nameLength > 30) {
+    //Verifica se todos os campos estão preenchidos;
+    if (nameValue == "" && emailInput.value == "" && messageInput.value == ""){
+      window.alert("Por favor preencha todos os campos do formulário!")
+        contactForm.nameInput.focus();
+        return false;
+
+      //Verifica se o campo Nome está vazio;
+    }else if(nameValue == "") {
         window.alert("Por favor preencha o campo Nome!")
           contactForm.nameInput.focus();
           return false;
-      // Testa se o campo é nulo e se existe '@' e '.com' já que o html não faz pois está como type text;
-    } else if( emailInput.value == "" || emailInput.value.indexOf('@' && '.com') == -1){
+
+      //Verifica se o Valor do campo tem menos de 3 caracteres;
+    }else if(nameLength < 3){
+      window.alert("Por favor preencha o campo com um nome válido com mais de 3 caracteres!!")
+        contactForm.nameInput.focus();
+        return false;
+
+      //Verifica se o Valor do campo tem mais que 30 caracteres;
+    }else if(nameLength > 30){
+      window.alert("Por favor preencha o campo com um nome válido com menos de 30 caracteres!!")
+        contactForm.nameInput.focus();
+        return false;
+
+      // Verifica se o campo está vazio e se existe '@' já que o html não faz pois está como type text;
+    }else if( emailInput.value == "" || emailInput.value.indexOf('@') == -1){
         window.alert("Por favor preencha o campo Email com um email válido!")
-          emailInput.focus();
+          contactForm.emailInput.focus();
           return false;
-      // Testa se o campo é nulo;
+
+      //Verifica se o campo está vazio;
     }else if (messageInput.value == "" ){
       window.alert("Por favor preencha o campo Menssagem!")
-        messageInput.focus();
+        contactForm.messageInput.focus();
         return false;
+      
+      //Caso todos os campos estejam preenchidos corretamente o formulário será enviado!;
     } else {
 
       // "window" é um objeto global que representa a janela (ou aba) do
