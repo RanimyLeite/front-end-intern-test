@@ -27,6 +27,13 @@ h1 {
     font-size: 71px;
     font-weight: normal;
     color: #FFF;
+    height: 150px;
+    width: 460px;
+    text-align: center;
+    text-align-last: center;
+    line-height: 60px;
+    padding-top: 30px;
+    margin-top: 100px;
 }
 
 form {
@@ -34,6 +41,7 @@ form {
     align-items: center;
     padding-left: 5px;
     padding-bottom: 10px; 
+    margin-top: -50px;
 }
 
 input {
@@ -62,28 +70,18 @@ textarea {
     color: #666;
 }
 
+form {
+    width: 100%;
+    max-width: 450px;
+    padding: 0 5px 0 10px;
+}
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
-.text-main{
-    height: 180px;
-    width: 460px;
-    text-align: center;
-    text-align-last: center;
-    line-height: 60px;
-}
-
-
-.form-cad {
-    width: 100%;
-    max-width: 450px;
-    padding: 0 5px 0 10px;
-}
-
 #button {
     margin: 15px auto 15px auto;
     border-radius: 5px;
@@ -100,7 +98,7 @@ textarea {
 
 /* Ultilizando Media query para ajustes na responsividade */
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     .container {
         display: flex;
     }
@@ -114,19 +112,16 @@ textarea {
         justify-content: flex-end;
         align-items: flex-end;
     }
-    .form-cad {
+    form {
         margin-left: 400px;
-        margin-top: 30px;
         width: 600px;
-    }
-    .text-main {
-        margin-left: 400px;
-        margin-top: 30px;
     }
     h1 {
         justify-content: center;
         align-items: center;
         font-size: 70px;
         line-height: 60px;
+        margin-left: 400px;
+        margin-top: 30px;
     }
 }
