@@ -1,126 +1,100 @@
-/* font-family: 'Cookie', cursive; */
+/* font-family: 'Cookiekb', cursive; */
 @import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
 
 /* font-family: 'Open Sans', sans-serif; */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
 
-/* Estilização dos elementos com Flexbox */
-
-body, html {
-    margin: 0;
-    padding: 0;
-    background: url(assets/04-BG.png);
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background: url(assets/04-BG.png); 
 }
+
+/* Estilização do Cabeçalho */
 
 header {
     width: 100%;
     height: 74px;
-    padding: 0px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     background: rgb(172,208,182);
 }
 
+/* Estilização do Texto Principal */
+
 h1 {
+    width: 35%;
+    display: flex;
     font-family: 'Cookie', cursive;
+    color: #FFFFFF;
+    text-align: center;
+    justify-content: center;
+    text-align-last: center;
     font-size: 71px;
     font-weight: normal;
-    color: #FFF;
-    height: 150px;
-    width: 460px;
-    text-align: center;
-    text-align-last: center;
-    line-height: 60px;
-    padding-top: 30px;
+    margin-left: 32.5%;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    border: 1px solid red;
 }
 
+/* Estilização do Formulário*/
+
 form {
-    width: 100%;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 0px 0px 30px 10px; 
-    max-width: 450px;
-    margin-top: -50px;
+    width: 35%;
+    height: 88%;
+    margin-left: 32.5%;
+    margin-bottom: 30px;
+    border: 1px solid blue;
 }
 
 input {
-    margin-top: 20px;
-    border: 0;
-    border-radius: 5px;
-    width: 400px;
-    height: 48px;
-    padding: 0 20px;
+    font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
-    font-size: 16px;
-    color: #666;
+    font-size: 18px;
+    padding-left: 10px;
+    margin: 10px 10px 15px 10px;
+    border-radius: 5px;
+    height: 48px;
+    border: 0px;
 }
 
 textarea {
-    margin-top: 20px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-    border: 0;
-    border-radius: 5px;
-    min-width: 300px;
-    width: 400px;
-    height: 145px;
-    padding: 10px 20px;
     font-size: 18px;
-    color: #666;
+    height: 145px;
+    font-weight: lighter;
+    padding: 10px 0 0 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 0;
 }
 
-input[type=submit] {
-    margin: 15px auto 15px auto;
-    border-radius: 5px;
-    width: 440px;
-    height: 48px;
+input[type = submit]{
+    margin: 15px 10px 15px 10px;
+    margin-bottom: 20px;
     font-size: 22px;
-    text-transform: uppercase;
-    background: rgb(113, 163, 151);
-    box-shadow: 0 7px 0 rgb(74, 137, 120);
     font-weight: bold;
     color: #FFFFFF;
     cursor: pointer;
+    text-transform: uppercase;
+    background: rgb(113, 163, 151);
+    box-shadow: 0 7px 0 rgb(74, 137, 120);
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-}
-/* Ultilizando Media query para ajustes na responsividade */
-
-@media screen and (max-width: 600px) {
-    .container {
-        display: flex;
-    }
-
-    header {
-        height: 74px;
-        width: 800px;
-        padding-left: 400px;
-    }
-
-    img {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-    }
-
-    form {
-        margin-left: 400px;
-        width: 600px;
-    }
-
-    h1 {
-        justify-content: center;
-        align-items: center;
-        font-size: 70px;
+@media screen and (max-width: 1000px) {
+    
+    h1{
+        width: 50%;
+        margin-left: 25%;
+        font-size: 60px;
         line-height: 60px;
-        margin-left: 400px;
-        margin-top: 30px;
+    }
+    form {
+        width: 50%;
+        margin-left: 25%;
     }
 }
