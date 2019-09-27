@@ -34,8 +34,10 @@ h1 {
     font-size: 71px;
     font-weight: normal;
     margin-left: 32.5%;
+    margin-right: 32.5%;
     margin-top: 80px;
     margin-bottom: 10px;
+    animation: text-animation 2s ease-out forwards;
 }
 
 /* Estilização do Formulário*/
@@ -46,7 +48,10 @@ form {
     width: 35%;
     height: 88%;
     margin-left: 32.5%;
+    margin-right: 32.5%;
+    justify-content: center;
     margin-bottom: 30px;
+    animation: form-animation 2s ease-out forwards;
 }
 
 input {
@@ -83,16 +88,57 @@ input[type = submit]{
     box-shadow: 0 7px 0 rgb(74, 137, 120);
 }
 
-@media screen and (max-width: 1000px) {
+.btn-submit:hover{
+    animation: btn-animation 1s ease-out forwards;
+}
+
+@keyframes text-animation {
+    from{
+        transform: translateX(400px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes form-animation {
+    from{
+        transform: translateX(-400px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes btn-animation {
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(-20px);
+    }
+    50%{
+        transform: translateX(20px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@media screen and (max-width: 450px) {
     
+    header {
+        width: 100%;
+    }
+
     h1{
-        width: 50%;
-        margin-left: 25%;
-        font-size: 60px;
-        line-height: 60px;
+        width: 90%;
+        margin-left: 15px;
+        font-size: 70px;
+        margin-bottom: 20px;
     }
     form {
-        width: 50%;
-        margin-left: 25%;
+        width: 90%;
+        margin-left: 15px;
     }
 }
